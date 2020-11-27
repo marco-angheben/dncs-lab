@@ -122,9 +122,14 @@ The assignment deliverable consists of a Github repository containing:
 I run _dcns-init_ script,which assigned me 3 values that need to be the number of scalable hosts in the subnets:
   * 457 for Host-A
   *  77 for Host-B
-  * 143
+  * 143 for Host-C
 
  ### CREATE THE SUBNET
 I establish to create 4 subnets:
-⋅⋅1. The first is beetween router1 and router2.It has to cover only the 2 router and for this reson the subnet must be /30 (232-30-2=2)
+1. The first is beetween router1 and router2. It has to cover only the 2 router and for this reson the subnet must be /30 (2<sup>32-30</sup> -2=2) I choose this slot of private adresses 198.168.1.0/30
+2. The second is between between _router-1_ and _host-a_. in this case I have to cover 457 adresses so I need /23 as netmask (2<sup>32-24</sup> -2= 254(NOT ENOUGH) instead  2<sup>32-23</sup> -2= 510(OK)). I used subnet 192.168.4.0/23
+3. The third  is between router-1 and host-b.it needs to accommodate up to 77 devices. In this case the subnet used is 192.168.3.0/25 (2<sup>32-25</sup> -2= 126)
+
+### TRICKY POINT
+Regarding the switch it's important to build the vlans to keep host-a and host-b in separate subnets. I installed the openvswitch packages(the installing commands were already provided) and set enp0s8, enp0s9 and enp0s10 up.
 
