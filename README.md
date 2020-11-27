@@ -90,8 +90,8 @@ The assignment deliverable consists of a Github repository containing:
 - an updated answers.yml file containing the details of your project
 
 ## Design Requirements
-- Hosts 1-a and 1-b are in two subnets (*Hosts-A* and *Hosts-B*) that must be able to scale up to respectively {{ HostsASubnetRequiredAddresses }} and {{ HostsBSubnetRequiredAddresses }} usable addresses
-- Host 2-c is in a subnet (*Hub*) that needs to accommodate up to {{ HubSubnetRequiredAddresses }} usable addresses
+- Hosts 1-a and 1-b are in two subnets (*Hosts-A* and *Hosts-B*) that must be able to scale up to respectively 457 and 77 usable addresses
+- Host 2-c is in a subnet (*Hub*) that needs to accommodate up to 143 usable addresses
 - Host 2-c must run a docker image (dustnic82/nginx-test) which implements a web-server that must be reachable from Host-1-a and Host-1-b
 - No dynamic routing can be used
 - Routes must be as generic as possible
@@ -117,4 +117,14 @@ The assignment deliverable consists of a Github repository containing:
 
 
 # Design
-[ Your work goes here ]
+
+FIRST STEP:
+I run dcns-init-script,which assigned me 3 values that need to be the number of scalable hosts in the subnets:
+  -> 457 for Host-A
+  ->  77 for Host-B
+  -> 143 for Hub 
+
+CREATE THE SUBNET
+I establish to create 4 subnets:
+  1) The first is beetween router1 and router2.It has to cover only the 2 router and for this reson the subnet must be /30 (232-30-2=2)
+
