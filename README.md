@@ -118,13 +118,13 @@ The assignment deliverable consists of a Github repository containing:
 
 # Design
 
-FIRST STEP:
-I run dcns-init-script,which assigned me 3 values that need to be the number of scalable hosts in the subnets:
-  -> 457 for Host-A
-  ->  77 for Host-B
-  -> 143 for Hub 
+### FIRST STEP:
+I run _dcns-init_ script,which assigned me 3 values that need to be the number of scalable hosts in the subnets:
+  * 457 for Host-A
+  *  77 for Host-B
+  * 143
 
-CREATE THE SUBNET
+ ### CREATE THE SUBNET
 I establish to create 4 subnets:
-  1) The first is beetween router1 and router2.It has to cover only the 2 router and for this reson the subnet must be /30 (232-30-2=2)
+⋅⋅1. The first is beetween router1 and router2.It has to cover only the 2 router and for this reson the subnet must be /30 (232-30-2=2)
 
