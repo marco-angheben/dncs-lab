@@ -1,11 +1,10 @@
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get update
-sudo apt -y install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
+sudo apt-get update                                     #update and upgrade of applications
+sudo apt-get upgrade
+sudo apt-get install -y docker.io                       #installation of docker engine
+sudo docker pull nginx                                  #downloading nginx image
+sudo docker run --name web-server -p 80:80 -d nginx     #running docker called 'web-server' using nginx on port 80:80
 
-sudo docker pull dustnic82/nginx-test
-sudo docker run --name nginx -p 80:80 -d dustnic82/nginx-test
 
 # Startup commands go here
 
