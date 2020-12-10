@@ -131,8 +131,6 @@ I establish to create 4 subnets:
 3. The third  is between router-1 and host-b.it needs to accommodate up to 77 devices. In this case the subnet used is 192.168.3.0/25 (2<sup>32-25</sup> -2= 126)
 The fourth is between router-2 and host-c. I chose here the subnet 192.168.7.0/24 in order to cover 143 adresses (the capacity would be 256)
 
-### TRICKY POINT
-
 
 ### IMPLEMENTATION, COMMANDS and TEST
 Following the instructions I made the routes as generic as possibl and for this reason I created only 1 route versus the 3 hosts. I used 192.168.0.0/21 as the destination of the route to cover all the IP from 192.168.0.0 to 192.168.7.255
@@ -141,15 +139,15 @@ Command for add a route:
 
 In the image above I point out all the interfaces that I set to up with the relative IP adresses.
 Here the commands I used:
-+ enable the IP forwarding in the routers `sysctl -w net.ipv4.ip_forward=1 command´
++ enable the IP forwarding in the routers `sysctl -w net.ipv4.ip_forward=1 command`
 + add an IP address to a port  `ip add add *IP-ADDRESS/NETMASK* dev  *INTERFACE*`
-+ set a port to up ip link set `dev  *INTERFACE* up command´
++ set a port to up ip link set `dev  *INTERFACE* up command`
 
-Regarding the switch it's important to build the vlans to keep host-a and host-b in separate subnets. I installed the openvswitch packages(the installing commands were already provided) and created to differnt vlan with tag 10 and 20.
+Regarding the switch it's important to build the vlans to keep host-a and host-b in separate subnets. I installed the `openvswitch` packages(the installing commands were already provided) and created to differnt vlan with tag 2 and 3.
 
-About host-2-c was requested to run on it a docker image. I found the command for insallation,downloading nginx-image and running docker called 'web-server' using nginx on port 80:80.
+About host-2-c was requested to run on it a `docker image`. I found the command for insallation,downloading nginx-image and running docker called 'web-server' using nginx on port 80:80.
 All the commands were written down on file .sh 
 
 FInally I try to `ping` all the possible connection between host-1-a, host-1-b and host-2-c.
-furthermore (with curl) I was able to see the html page present in host-c docker webserver.
+furthermore with `curl 192.168.7.4` I was able to see the html page present in host-c docker webserver.
 
