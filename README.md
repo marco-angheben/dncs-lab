@@ -117,6 +117,8 @@ The assignment deliverable consists of a Github repository containing:
 
 
 # Design
+Network:
+![alt text] (https://github.com/marco-angheben/dncs-lab/blob/master/network.pdf "Logo Title Text 1")
 
 ### FIRST STEP:
 I run _dcns-init_ script,which assigned me 3 values that need to be the number of scalable hosts in the subnets:
