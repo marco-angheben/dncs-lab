@@ -134,6 +134,7 @@ The fourth is between router-2 and host-c. I chose here the subnet 192.168.7.0/2
 
 ### IMPLEMENTATION, COMMANDS and TEST
 Following the instructions I made the routes as generic as possibl and for this reason I created only 1 route versus the 3 hosts. I used 192.168.0.0/21 as the destination of the route to cover all the IP from 192.168.0.0 to 192.168.7.255
+For the same reason I decided to not touch the default gateway and I set up only the specific route, that means only the subnet that I know.
 Command for add a route:
 + `ip route add *IP-ADDRESS/NETMASK* via *INTERFACE* command`
 
@@ -147,6 +148,8 @@ Regarding the switch it's important to build the vlans to keep host-a and host-b
 
 About host-2-c was requested to run on it a `docker image`. I found the command for insallation,downloading nginx-image and running docker called 'web-server' using nginx on port 80:80.
 All the commands were written down on file .sh 
+
+
 
 FInally I try to `ping` all the possible connection between host-1-a, host-1-b and host-2-c.
 furthermore with `curl 192.168.7.4` I was able to see the html page present in host-c docker webserver.
