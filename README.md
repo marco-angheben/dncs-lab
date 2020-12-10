@@ -154,5 +154,6 @@ All the commands were written down on file .sh
 
 
 FInally I try to `ping` all the possible connection between host-1-a, host-1-b and host-2-c.
-furthermore with `curl 192.168.7.4` I was able to see the html page present in host-c docker webserver.
+Furthermore, with `curl 192.168.7.4`, I was able to see the html page present in host-c docker webserver.
+The result is that the architecture works fine!
 
