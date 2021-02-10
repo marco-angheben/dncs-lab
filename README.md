@@ -171,7 +171,7 @@ From host-2-c to all the other:
 
 
 Furthermore, with `curl 192.168.7.4`, I was able to see the html page present in host-c docker webserver.
-The example below referred to host-b, but it's works from all the other machines.
+The example below referred to host-b, but it's works also from host-a.
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/curl_screen.png)
 
 The final result is that the architecture works fine!
