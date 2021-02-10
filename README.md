@@ -128,7 +128,7 @@ I run _dcns-init_ script,which assigned me 3 values that need to be the number o
 
  ### CREATE THE SUBNET
 I established to create 4 subnets:
-1. The first beetween router1 and router2. It has to cover only the 2 router and for this reson the subnet must be /30 (2<sup>32-30</sup> -2=2) I chose this slot of private adresses 198.168.1.0/30
+1. The first beetween router1 and router2. It has to cover only the 2 router and for this reason the subnet must be /30 (2<sup>32-30</sup> -2=2) I chose this slot of private adresses 198.168.1.0/30
 2. The second between _router-1_ and _host-a_. in this case I had to cover 457 adresses so I needed /23 as netmask (2<sup>32-24</sup> -2= 254(NOT ENOUGH) instead  2<sup>32-23</sup> -2= 510(OK)). I used subnet 192.168.4.0/23
 3. The third between router-1 and host-b.It needed to accommodate up to 77 devices. In this case the subnet used was 192.168.3.0/25 (2<sup>32-25</sup> -2= 126)
 The fourth between router-2 and host-c. I chose here the subnet 192.168.7.0/24 in order to cover 143 adresses (the capacity would be 256)
