@@ -1,4 +1,4 @@
-xport DEBIAN_FRONTEND=noninteractive
+export DEBIAN_FRONTEND=noninteractive
 
 # Startup commands go here
 
