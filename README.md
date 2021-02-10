@@ -154,19 +154,20 @@ The commands were written down on file .sh
 
 ### TEST
 FInally I tried to connect with `vagrant ssh` to all the machines and with `ping` i tried all the possible connection.
-From router-1 to all the other:
+
+From router-1 to all the others:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router1_ssh.png)
 
-From router-2 to all the other:
+From router-2 to all the others:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router2_ssh.png)
 
-From host-1-a to all the other:
+From host-1-a to all the others:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hosta_ssh.png)
 
-From host-1-b to all the other:
+From host-1-b to all the others:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostb_ssh.png)
 
-From host-2-c to all the other:
+From host-2-c to all the others:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostc_ssh.png)
 
 
