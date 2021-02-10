@@ -153,7 +153,7 @@ The commands were written down on file .sh
 
 
 ### TEST
-FInally I tried to `ping` all the possible connection between host-1-a, host-1-b and host-2-c.
+FInally I tried to connect with `vagrant ssh` to all the machines and with `ping` i tried all the possible connection.
 From router-1 to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router1_ssh.png)
 From router-2 to all the other:
