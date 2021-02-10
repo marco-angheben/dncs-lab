@@ -154,8 +154,20 @@ The commands were written down on file .sh
 
 ### TEST
 FInally I tried to `ping` all the possible connection between host-1-a, host-1-b and host-2-c.
+From router-1 to all the other:
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router1_ssh.png)
+From router-2 to all the other:
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router2_ssh.png)
+From host-1-a to all the other:
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hosta_ssh.png)
+From host-1-b to all the other:
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostb_ssh.png)
+From host-2-c to all the other:
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostc_ssh.png)
+
 
 Furthermore, with `curl 192.168.7.4`, I was able to see the html page present in host-c docker webserver.
+![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/curl.png)
 
 The final result is that the architecture works fine!
 
