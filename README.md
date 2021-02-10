@@ -156,17 +156,22 @@ The commands were written down on file .sh
 FInally I tried to connect with `vagrant ssh` to all the machines and with `ping` i tried all the possible connection.
 From router-1 to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router1_ssh.png)
+
 From router-2 to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/router2_ssh.png)
+
 From host-1-a to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hosta_ssh.png)
+
 From host-1-b to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostb_ssh.png)
+
 From host-2-c to all the other:
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/hostc_ssh.png)
 
 
 Furthermore, with `curl 192.168.7.4`, I was able to see the html page present in host-c docker webserver.
+The example below referred to hos-b, but it's works from all the other machines
 ![alt text](https://github.com/marco-angheben/dncs-lab/blob/master/curl.png)
 
 The final result is that the architecture works fine!
